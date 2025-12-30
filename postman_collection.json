@@ -1,0 +1,73 @@
+{
+    "info": {
+        "_postman_id": "dapplooker-assignment-collection",
+        "name": "Token Insight & Analytics API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get Token Insight",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"vs_currency\": \"usd\",\n  \"history_days\": 30\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/token/bitcoin/insight",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "token",
+                        "bitcoin",
+                        "insight"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get HyperLiquid PnL",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/hyperliquid/0x4129c62faf652fea61375dcd9ca8ce24b2bb8b95/pnl?start=2025-12-01&end=2025-12-30",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "hyperliquid",
+                        "0x4129c62faf652fea61375dcd9ca8ce24b2bb8b95",
+                        "pnl"
+                    ],
+                    "query": [
+                        {
+                            "key": "start",
+                            "value": "2025-12-01"
+                        },
+                        {
+                            "key": "end",
+                            "value": "2025-12-30"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
