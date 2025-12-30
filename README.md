@@ -19,6 +19,7 @@ docker-compose up --build
 Setup (Local)
 npm install
 npx prisma generate
+npx prisma db push (to your local or cloud postgres instance)
 npm run dev
 
 Environment
